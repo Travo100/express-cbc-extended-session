@@ -1,0 +1,28 @@
+{
+  "name": "express-cbc-extended-session",
+  "version": "1.0.0",
+  "description": "Extended session on express for cbc",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Travo100/express-cbc-extended-session.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "api",
+    "server"
+  ],
+  "author": "Travis Thompson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Travo100/express-cbc-extended-session/issues"
+  },
+  "homepage": "https://github.com/Travo100/express-cbc-extended-session#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
