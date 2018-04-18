@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Travo100/express-cbc-extended-session#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.3"
   }
 }

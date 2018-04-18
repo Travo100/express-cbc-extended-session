@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <title>Contact</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Contact Page</h1>
+            <a href="/" class="btn btn-danger">Home</a>
+            <a href="/users" class="btn btn-danger">Users</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <button type="submit" class="btn btn-default" id="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        $("#submit-btn").on("click", function (e) {
+            // when the user select the submit-btn 
+            e.preventDefault();
+            
+            // set the values of the form above in an object
+            var bodyData = {
+                name: $("#name").val().trim(),
+                email: $("#email").val().trim()
+            };
+
+            // do a POST request with that object
+            // to /api/new
+            $.post("/api/new", bodyData).then(function (responseData) {
+                console.log(responseData);
+                // alert the user if it was successful
+                alert("Added new user");
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
